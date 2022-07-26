@@ -1,0 +1,41 @@
+-var titulo = "Titulo Principal"
+-var titulos = ["Titulo Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3",]
+-var usuario = "Jersson"
+mixin caja(imagen,titul,contenido)
+    div.caja
+        div.caja__imagen
+            img(src="./images/"+imagen)
+        div.caja__contenido
+            h3=titul
+            p=contenido
+            a.boton otro ver más
+doctype html
+html(lang="es")
+    head 
+        meta(charset="UTF-8")
+        meta(name="description", content="platzigames")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="robots", content="index, follow")
+        link(rel="icon", href="url.ico")
+        link(rel="stylesheet", href="./css/ejercicio-pug.css")
+        title Platzi games
+    body 
+        header 
+            h1 Platzi Games
+            if usuario
+                a Hola #{usuario}
+            else
+                a.boton Registro
+        section.intro
+            div.intro__image
+                img(src="./images/imagen.png")
+            div.intro__contenido
+                h2 #{titulos[0]}
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas expedita veritati 
+                span mas texto
+                a.boton Leer más
+        div.contenido
+            each titulo in titulos
+                +caja('imagen.png', titulo, 'texto prueba')
+    footer 
+        h3 este es el footer
