@@ -1,0 +1,12 @@
+include ./variales.pug
+section.intro
+    div.intro__image
+        img(src="./images/imagen.png")
+    div.intro__contenido
+        h2 #{titulos[0]}
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas expedita veritati 
+        span mas texto
+        a.boton Leer más
+div.contenido
+    each titulo in titulos
+        +caja('imagen.png', titulo, 'texto prueba')

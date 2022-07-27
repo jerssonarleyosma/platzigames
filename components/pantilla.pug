@@ -1,0 +1,9 @@
+include variales.pug
+include head.pug
+doctype html
+html(lang="es")
+    +head("plantilla", "ico", "../css/ejercicio-pug.css")
+    body
+        include ./header.pug
+        block nuevocon
+    include ./footer.pug
