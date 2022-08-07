@@ -1,6 +1,18 @@
+h3 {
+  font-size: 20px;
+  margin: 0;
+}
+h2 {
+  font-size: 25px;
+  margin: 0;
+}
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -14,11 +26,66 @@ body {
   background-size: cover;
   text-align: center;
 }
-.buscador__input {
+.buscador input {
   width: 75%;
   height: 60px;
   padding: 20px;
   border: none;
   border-radius: 30px;
   font-size: 25px;
+}
+.encabezado--con-filtros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.encabezado--con-filtros .filtros {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contenido {
+  width: 95%;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 70px;
+     -moz-column-gap: 70px;
+          column-gap: 70px;
+}
+.contenido .caja {
+  width: 30vw;
+  color: $color-primario;
+  -webkit-box-shadow: 30px 20px 18px 7px rgba(0,0,0,0.2);
+          box-shadow: 30px 20px 18px 7px rgba(0,0,0,0.2);
+}
+.contenido .caja__imagen {
+  width: 200px;
+}
+.contenido .caja__imagen img {
+  max-width: 100%;
+}
+.contenido .caja .estadistica--articulos {
+  margin: 20px 0 0 0;
+}
+.contenido .caja .estadistica--articulos ul {
+  padding: 0 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
